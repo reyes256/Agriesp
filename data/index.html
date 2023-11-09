@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+      }
+
+      body {
+        background-color: rgb(56, 56, 56);
+        height: 100dvh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .cross-container {
+        width: 15rem;
+        height: 15rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cross-container div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 6rem;
+        height: 6rem;
+
+        font-size: 2rem;
+
+        background-color: rgb(219, 88, 219);
+        user-select: none;
+        color: white;
+      }
+
+      .button:hover {
+        background-color: rgb(156, 60, 156);
+        cursor: pointer;
+      }
+
+      .button:active {
+        background-color: rgb(136, 48, 136);
+      }
+
+      .cross-container div:nth-child(2) .ok {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        border: 0.4rem solid rgba(0, 0, 0, 0.082);
+        font-size: 1rem;
+      }
+
+      .forward {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .left {
+        border-radius: 10px 0 0 10px;
+      }
+
+      .right {
+        border-radius: 0 10px 10px 0;
+      }
+
+      .backward {
+        border-radius: 0 0 10px 10px;
+      }
+
+      /* ///////////////////////////////// */
+
+      .options {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+
+        width: 15rem;
+        gap: 1rem;
+      }
+
+      .options a {
+        color: white;
+        background-color: rgb(71, 71, 71);
+        text-decoration: none;
+        border-radius: 10px;
+        width: 1000px;
+        padding: 1rem;
+      }
+
+      .options a:hover {
+        background-color: rgb(61, 61, 61);
+      }
+      .options a:active {
+        background-color: rgb(51, 51, 51);
+      }
+
+      /* ///////////////////////////////// */
+
+      .up {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .down {
+        border-radius: 0 0 10px 10px;
+      }
+    </style>
+    <title>AJONJOLINI</title>
+  </head>
+  <body>
+    <div class="options">
+      <a>Agrupar</a>
+      <a>Cortar</a>
+    </div>
+
+    <div class="cross-container">
+      <div>
+        <a class="button forward">
+          <p>&#8593;</p>
+        </a>
+      </div>
+      <div>
+        <a class="button left">
+          <p class="left">&#8592;</p>
+        </a>
+        <a class="button">
+          <p class="ok">ok</p>
+        </a>
+        <a class="button right">
+          <p>&#8594;</p>
+        </a>
+      </div>
+      <div>
+        <a class="button backward">
+          <p>&#8595;</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="elevate">
+      <a class="button up">&#8593;</a>
+      <a class="button down">&#8595;</a>
+    </div>
+    <!-- <a href="/on">Prender</a>
+    <a href="/off">Apagar</a> -->
+  </body>
+</html>
