@@ -52,12 +52,12 @@
         color: white;
       }
 
-      .button:hover {
+      .button:hover:not(.center) {
         background-color: rgb(156, 60, 156);
         cursor: pointer;
       }
 
-      .button:active {
+      .button:active:not(.center) {
         background-color: rgb(136, 48, 136);
       }
 
@@ -70,7 +70,7 @@
         height: 90%;
         border-radius: 50%;
         border: 0.4rem solid rgba(0, 0, 0, 0.082);
-        font-size: 1rem;
+        font-size: 1.4rem;
       }
 
       .forward {
@@ -95,6 +95,7 @@
         display: flex;
         justify-content: space-around;
         text-align: center;
+        font-size: 1.5rem;
 
         width: 15rem;
         gap: 1rem;
@@ -107,6 +108,10 @@
         border-radius: 10px;
         width: 1000px;
         padding: 1rem;
+      }
+
+      .options a div {
+        font-size: 1rem;
       }
 
       .options a:hover {
@@ -130,8 +135,14 @@
   </head>
   <body>
     <div class="options">
-      <a>Agrupar</a>
-      <a>Cortar</a>
+      <a
+        >&#8855;
+        <div>Agrupar</div></a
+      >
+      <a
+        >&#9986;
+        <div>Cortar</div></a
+      >
     </div>
 
     <div class="cross-container">
@@ -144,8 +155,8 @@
         <a class="button left">
           <p class="left">&#8592;</p>
         </a>
-        <a class="button">
-          <p class="ok">ok</p>
+        <a class="button center">
+          <!-- <p class="ok">&#9986;</p> -->
         </a>
         <a class="button right">
           <p>&#8594;</p>
